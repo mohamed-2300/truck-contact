@@ -40,7 +40,12 @@ export default function Root() {
   return (
     <>
       <div id="sidebar">
-        <h1>React Router Contacts</h1>
+      
+        <h1>Check out{"   "} 
+        <a href="https://github.com/mohamed-2300/">
+           My Github account
+        </a>.</h1>
+
         <div>
           <Form id="search-form" role="search">
             <input
@@ -69,8 +74,8 @@ export default function Root() {
           {contacts.length ? (
             <ul>
               {contacts.map((contact) => (
-                <li key={contact.id}>
-                  <NavLink
+                <li  className="red" key={contact.id}>
+                  <NavLink 
                     to={`contacts/${contact.id}`}
                     className={({ isActive, isPending }) =>
                       isActive ? "active" : isPending ? "pending" : ""

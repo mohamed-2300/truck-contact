@@ -25,7 +25,7 @@ body {
   height: 100%;
   margin: 0;
   line-height: 1.5;
-  color: #121212;
+  color: #e2d9d9;
 }
 textarea,
 input,
@@ -379,4 +379,163 @@ i {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+/* Colors updated for modern and professional aesthetics */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f7f9; /* Light neutral background */
+  color: #121212;
+}
+
+/* Typography & Code */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Buttons */
+button {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  background-color: #d9e7ff; /* Soft light blue */
+  color: #3992ff; /* Primary blue */
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #aad4ff; /* Lighter blue on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: translateY(1px);
+}
+
+/* Accent Colors for Key Elements */
+form[action$="destroy"] button {
+  color: #f44250; /* Accent red */
+  background-color: #ffeaea; /* Light red background */
+}
+
+#sidebar nav a.active {
+  background: #7f5fff; /* Violet accent for active links */
+  color: white;
+}
+
+#sidebar nav a:hover {
+  background: #a59cff; /* Slightly lighter violet */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+textarea, input, button {
+  animation: fadeIn 0.5s ease;
+}
+
+button:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Sidebar */
+#sidebar {
+  width: 22rem;
+  background-color: #ffffff; /* Pure white */
+  border-right: solid 1px #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.8s ease;
+}
+
+#sidebar nav a {
+  color: #121212;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#sidebar nav a:hover {
+  transform: translateX(5px);
+}
+
+#detail {
+  flex: 1;
+  padding: 2rem 4rem;
+  background-color: #f7f7f9;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Contact Form Animations */
+#contact-form label input,
+#contact-form label textarea {
+  transition: border-color 0.3s ease;
+}
+
+#contact-form label input:focus,
+#contact-form label textarea:focus {
+  border-color: #3992ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(57, 146, 255, 0.5);
+}
+
+/* Error Page */
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #ffe1a8; /* Soft yellow for error context */
+  animation: fadeIn 1s ease;
+}
+
+#error-page h1 {
+  color: #f44250; /* Strong red for errors */
+}
+
+.red{
+  color: red;
 }
